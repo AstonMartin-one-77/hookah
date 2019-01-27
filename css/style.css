@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,900&subset=cyrillic,cyrillic-ext');
+/* -==============  Colors  ==============- */
+/* -==============  Basic settings  ==============- */
+html {
+  font-size: 10px;
+}
+body {
+  background-color: #191919;
+}
+a,
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* -==============  Typography  ==============- */
+.main-text {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.container {
+  height: 100%;
+}
+.container > .row {
+  height: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+/* Horizontal flexbox (basic align - center): */
+.h-flexblock {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* Vertical flexbox (basic align - center): */
+.v-flexblock {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* Vertical flexbox (align - left): */
+.v-flexblock-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+/* Navigation menu (Horizontal): */
+nav {
+  height: 100%;
+}
+nav ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  padding: 0rem 2rem;
+}
+/* Clockwise for blocks: */
+.clockwise-wrapper {
+  margin: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: skewY(2deg);
+          transform: skewY(2deg);
+}
+.clockwise-wrapper .clockwise {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  top: 50%;
+  background-color: black;
+  -webkit-transform: translateY(-50%) skewY(-2deg);
+          transform: translateY(-50%) skewY(-2deg);
+}
+/* Anticlockwise for blocks: */
+.anticlockwise-wrapper {
+  margin: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: skewY(2deg);
+          transform: skewY(2deg);
+  -webkit-transform: skewY(-2deg);
+          transform: skewY(-2deg);
+}
+.anticlockwise-wrapper .clockwise {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  top: 50%;
+  background-color: black;
+  -webkit-transform: translateY(-50%) skewY(-2deg);
+          transform: translateY(-50%) skewY(-2deg);
+}
+.anticlockwise-wrapper .anticlockwise {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  top: 50%;
+  background-color: black;
+  -webkit-transform: translateY(-50%) skewY(-2deg);
+          transform: translateY(-50%) skewY(-2deg);
+  -webkit-transform: translateY(-50%) skewY(2deg);
+          transform: translateY(-50%) skewY(2deg);
+}
+/* -==============  Header  ==============- */
+.header {
+  padding-top: 3rem;
+  /* header-main-menu decoration: */
+}
+.header-phonelink a,
+.header-main-menu a {
+  opacity: 1;
+  text-transform: uppercase;
+}
+.header-phonelink a:hover,
+.header-main-menu a:hover {
+  opacity: 0.8;
+}
+/* -==============  Main  ==============- */
+.main {
+  /* Main banner: */
+}
+.main .main-banner .container-fluid {
+  padding: 0;
+}
+.main .main-banner-wrapper {
+  height: 70rem;
+}
+.main .main-banner-slider .msb-item img {
+  width: 100%;
+  height: auto;
+}

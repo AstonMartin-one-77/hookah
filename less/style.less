@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,900&subset=cyrillic,cyrillic-ext');
+
+/* -==============  Colors  ==============- */
+@bg-header-color: rgb(25, 25, 25);
+@bg-dark-color: rgb(25, 25, 25);
+@bg-light-color: rgb(255, 255, 255);
+
+@text-light: rgb(255, 255, 255);
+
+/* -==============  Basic settings  ==============- */
+html {
+  font-size: 10px;
+}
+body {
+  background-color: @bg-header-color;
+}
+a, a:hover {
+  color: @text-light;
+  text-decoration: none;
+}
+
+/* -==============  Typography  ==============- */
+.main-text {
+  font-family: 'Montserrat', sans-serif;
+  color: @text-light;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.container {
+  height: 100%;
+  > .row {
+    height: 100%;
+    align-items: stretch;
+  }
+}
+/* Horizontal flexbox (basic align - center): */
+.h-flexblock {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+/* Vertical flexbox (basic align - center): */
+.v-flexblock {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+/* Vertical flexbox (align - left): */
+.v-flexblock-left {
+  .v-flexblock;
+  align-items: flex-start;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+/* Navigation menu (Horizontal): */
+nav {
+  height: 100%;
+  ul {
+    .h-flexblock;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 0rem 2rem;
+    }
+  }
+}
+/* Clockwise for blocks: */
+.clockwise-wrapper {
+  margin: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  transform: skewY(2deg);
+  .clockwise {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    top: 50%;
+    background-color: black;
+    transform: translateY(-50%) skewY(-2deg);
+  }
+}
+
+/* Anticlockwise for blocks: */
+.anticlockwise-wrapper {
+  .clockwise-wrapper;
+  transform: skewY(-2deg);
+  .anticlockwise {
+    .clockwise;
+    transform: translateY(-50%) skewY(2deg);
+  }
+}
+
+/* -==============  Header  ==============- */
+.header {
+  padding-top: 3rem;
+  /* header-main-menu decoration: */
+  &-main-menu {
+    
+  }
+  &-phonelink a,
+  &-main-menu a {
+    opacity: 1;
+    text-transform: uppercase;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* -==============  Main  ==============- */
+.main {
+  /* Main banner: */
+  .main-banner {
+    .container-fluid {
+      padding: 0;
+    }
+    &-wrapper {
+      height: 70rem;
+    }
+    &-slider {
+      .msb-item img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

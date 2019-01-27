@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hookah</title>
+  <title>Hookah_Box</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css"/>
+  <!-- Styles -->
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   
@@ -12,11 +19,79 @@
     <div class="header-logo">
       <div class="container">
         <div class="row">
-          
+          <div class="col-auto">
+            <div class="header-phonelink">
+              <a href="tel:+79990290753" class="main-text">Связаться с нами</a>
+            </div>
+          </div>
+          <div class="col-auto ml-auto mr-auto"></div>
+          <div class="col-auto"></div>
+        </div>
+        <div class="row">
+          <div class="col-auto ml-auto mr-auto">
+            <nav class="header-main-menu">
+              <ul>
+                <li><a href="#" class="main-text">Дизайн</a></li>
+                <li><a href="#" class="main-text">Процесс</a></li>
+                <li><a href="#" class="main-text">Галерея</a></li>
+                <li><a href="#" class="main-text">Команда</a></li>
+                <li><a href="#" class="main-text">Партнеры</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
   </header>
   
+  <main class="main">
+   <div class="main-banner">
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col">
+           <div class="main-banner-wrapper anticlockwise-wrapper">
+             <div class="anticlockwise">
+              <div class="main-banner-slider">
+               <div class="msb-item">
+                  <img src="img/main-banner-4.jpg" alt="Слайд-4">
+                </div>
+                <div class="msb-item">
+                  <img src="img/main-banner-3.jpg" alt="Слайд-2">
+                </div>
+                <div class="msb-item">
+                  <img src="img/main-banner-2.jpg" alt="Слайд-3">
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </main>
+  
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- jQuery Migrate for Slick component -->
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>
+  <script src="css/slick/slick.min.js"></script>
+  
+  <!-- Slick settings: -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.main-banner-slider').slick({
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        centerMode: true,
+        centerPadding: 0,
+        fade: true,
+        pauseOnHover: false
+      });
+    });
+  </script>
 </body>
 </html>
