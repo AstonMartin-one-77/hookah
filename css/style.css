@@ -4,9 +4,6 @@
 html {
   font-size: 10px;
 }
-body {
-  background-color: #191919;
-}
 a,
 a:hover {
   color: #ffffff;
@@ -102,8 +99,6 @@ nav ul li {
 }
 /* Clockwise for blocks: */
 .clockwise-wrapper {
-  margin: 4rem 0;
-  position: relative;
   overflow: hidden;
   -webkit-transform: skewY(2deg);
           transform: skewY(2deg);
@@ -116,11 +111,15 @@ nav ul li {
   background-color: black;
   -webkit-transform: translateY(-50%) skewY(-2deg);
           transform: translateY(-50%) skewY(-2deg);
+  /* For Chrome: Removes visible lines (collisions). 
+    This is noticeable in the pictures. */
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-filter: blur(0);
+          filter: blur(0);
 }
 /* Anticlockwise for blocks: */
 .anticlockwise-wrapper {
-  margin: 4rem 0;
-  position: relative;
   overflow: hidden;
   -webkit-transform: skewY(2deg);
           transform: skewY(2deg);
@@ -135,6 +134,12 @@ nav ul li {
   background-color: black;
   -webkit-transform: translateY(-50%) skewY(-2deg);
           transform: translateY(-50%) skewY(-2deg);
+  /* For Chrome: Removes visible lines (collisions). 
+    This is noticeable in the pictures. */
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-filter: blur(0);
+          filter: blur(0);
 }
 .anticlockwise-wrapper .anticlockwise {
   position: absolute;
@@ -144,12 +149,20 @@ nav ul li {
   background-color: black;
   -webkit-transform: translateY(-50%) skewY(-2deg);
           transform: translateY(-50%) skewY(-2deg);
+  /* For Chrome: Removes visible lines (collisions). 
+    This is noticeable in the pictures. */
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-filter: blur(0);
+          filter: blur(0);
   -webkit-transform: translateY(-50%) skewY(2deg);
           transform: translateY(-50%) skewY(2deg);
 }
 /* -==============  Header  ==============- */
 .header {
-  padding-top: 3rem;
+  padding: 3rem 0 10rem 0;
+  margin-bottom: -5rem;
+  background-color: #191919;
   /* header-main-menu decoration: */
 }
 .header-phonelink a,
@@ -164,9 +177,6 @@ nav ul li {
 /* -==============  Main  ==============- */
 .main {
   /* Main banner: */
-}
-.main .main-banner .container-fluid {
-  padding: 0;
 }
 .main .main-banner-wrapper {
   height: 70rem;

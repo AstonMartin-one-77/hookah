@@ -11,13 +11,12 @@
 html {
   font-size: 10px;
 }
-body {
-  background-color: @bg-header-color;
-}
+
 a, a:hover {
   color: @text-light;
   text-decoration: none;
 }
+
 
 /* -==============  Typography  ==============- */
 .main-text {
@@ -72,8 +71,6 @@ nav {
 }
 /* Clockwise for blocks: */
 .clockwise-wrapper {
-  margin: 4rem 0;
-  position: relative;
   overflow: hidden;
   transform: skewY(2deg);
   .clockwise {
@@ -83,6 +80,10 @@ nav {
     top: 50%;
     background-color: black;
     transform: translateY(-50%) skewY(-2deg);
+    /* For Chrome: Removes visible lines (collisions). 
+    This is noticeable in the pictures. */
+    backface-visibility: hidden;
+    filter: blur(0);
   }
 }
 
@@ -98,7 +99,9 @@ nav {
 
 /* -==============  Header  ==============- */
 .header {
-  padding-top: 3rem;
+  padding: 3rem 0 10rem 0;
+  margin-bottom: -5rem;
+  background-color: @bg-header-color;
   /* header-main-menu decoration: */
   &-main-menu {
     
@@ -117,9 +120,6 @@ nav {
 .main {
   /* Main banner: */
   .main-banner {
-    .container-fluid {
-      padding: 0;
-    }
     &-wrapper {
       height: 70rem;
     }
