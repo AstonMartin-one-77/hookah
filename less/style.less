@@ -71,6 +71,7 @@ nav {
 }
 /* Clockwise for blocks: */
 .clockwise-wrapper {
+  position: relative;
   overflow: hidden;
   transform: skewY(2deg);
   .clockwise {
@@ -127,6 +128,10 @@ nav {
       .msb-item img {
         width: 100%;
         height: auto;
+      }
+      /* Outline - off. */
+      .slick-slide {
+        outline: none;
       }
     }
   }

@@ -99,6 +99,7 @@ nav ul li {
 }
 /* Clockwise for blocks: */
 .clockwise-wrapper {
+  position: relative;
   overflow: hidden;
   -webkit-transform: skewY(2deg);
           transform: skewY(2deg);
@@ -120,6 +121,7 @@ nav ul li {
 }
 /* Anticlockwise for blocks: */
 .anticlockwise-wrapper {
+  position: relative;
   overflow: hidden;
   -webkit-transform: skewY(2deg);
           transform: skewY(2deg);
@@ -181,7 +183,13 @@ nav ul li {
 .main .main-banner-wrapper {
   height: 70rem;
 }
+.main .main-banner-slider {
+  /* Outline - off. */
+}
 .main .main-banner-slider .msb-item img {
   width: 100%;
   height: auto;
+}
+.main .main-banner-slider .slick-slide {
+  outline: none;
 }
